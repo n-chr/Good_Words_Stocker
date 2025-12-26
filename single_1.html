@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Words Stocker</title>
+    <link rel="stylesheet" href="./css/single_style.css">
+    <script src="./js/single_script.js" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header-mobile">
+        <a href="index.html">
+            <h1><img src="./img/logo.png"></h1>
+        </a>
+        <div id="navArea">
+            <nav>
+                <div class="inner">
+                    <ul>
+                        <li><a href="./index.html#sec01">About</a></li>
+                        <li><a href="./index.html#sec02">Words</a></li>
+                        <li><a href="./index.html#sec03">Survey Results</a></li>
+                        <li><a href="./index.html#sec04">References</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="toggle_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="mask"></div>
+        </div>
+    </header>
+    <div class="outer-container">
+        <aside class="left-side-element">
+            <div class="nav_wrapper">
+                <div class="button_solid012">
+                    <a href="./index.html#sec01">About<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec02">Words<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec03">Survey Results<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec04">References<i class="fas fa-angle-right fa-position-right"></i></a>
+                </div>
+            </div>
+        </aside>
+        <div class="wrapper cstm-box-notebook" id="sec01">
+            <section class="Words" style="background-color: #ff8787;">
+                <h2>承認</h2>
+                <h3 style="color: #FFF;">相手の行動、努力、結果を認め、評価する言葉</h3>
+            </section>
+            <section class="Words-list" id="sec02">
+                <div class="list-grid">
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-ganbatta">
+                        <h4>頑張ったね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-sugoi">
+                        <h4>すごい</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-saikou">
+                        <h4>最高</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-yarikiru">
+                        <h4>難しかったのに、やりきったね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-rasii">
+                        <h4>〇〇らしいね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-kitai">
+                        <h4>期待以上だよ！</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-sasuga">
+                        <h4>さすがだね！</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-yokuyatta">
+                        <h4>よくやった！</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-umakuiku">
+                        <h4>おかげでうまくいったよ</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-kigatuku">
+                        <h4>よく気がついたね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;" data-modal-target="#modal-kanoeki">
+                        <h4>完璧だね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff8787;"
+                        data-modal-target="#modal-sonotyousi">
+                        <h4>その調子！</h4>
+                    </div>
+                </div>
+            </section>
+            <section id="modal">
+                <div id="modal-ganbatta" class="modal">
+                    <div class="modal-content">
+                        <h4>頑張ったね</h4>
+                        <p>相手の努力やプロセスを認め、評価しているため。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-sugoi" class="modal">
+                    <div class="modal-content">
+                        <h4>すごい</h4>
+                        <p>相手の結果や行動に対する汎用的な評価・称賛。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-saikou" class="modal">
+                    <div class="modal-content">
+                        <h4>最高</h4>
+                        <p>相手の行動や結果に対して、最大級の評価を示しているため。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-yarikiru" class="modal">
+                    <div class="modal-content">
+                        <h4>難しかったのに、やりきったね</h4>
+                        <p>努力と結果の両方を認め、高い達成度を承認する。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-rasii" class="modal">
+                    <div class="modal-content">
+                        <h4>〇〇らしいね</h4>
+                        <p>相手の行動や結果が、その人ならではの強みや特性を認める。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kitai" class="modal">
+                    <div class="modal-content">
+                        <h4>期待以上だよ！</h4>
+                        <p>相手の結果が、評価者の予測を超えたことを示す、強い承認の言葉。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-sasuga" class="modal">
+                    <div class="modal-content">
+                        <h4>さすがだね！</h4>
+                        <p>結果や能力に対する評価を簡潔に伝え、汎用的に承認する。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-yokuyatta" class="modal">
+                    <div class="modal-content">
+                        <h4>よくやった！</h4>
+                        <p>目標達成や完了という結果を直接的に評価し承認する。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-umakuiku" class="modal">
+                    <div class="modal-content">
+                        <h4>おかげでうまくいったよ</h4>
+                        <p>相手の行動や貢献が成功に繋がったという結果を明確に承認する。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kigatuku" class="modal">
+                    <div class="modal-content">
+                        <h4>よく気がついたね</h4>
+                        <p>相手の注意深さや洞察力という行動を認める。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kanoeki" class="modal">
+                    <div class="modal-content">
+                        <h4>完璧だね</h4>
+                        <p>相手のアウトプットの質を高く評価し、承認する。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-sonotyousi" class="modal">
+                    <div class="modal-content">
+                        <h4>その調子！</h4>
+                        <p>現在の行動が正しい方向へ進んでいることを認め、継続を促す。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff8787;">閉じる</button>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <h3>実際に言われた言葉たち</h3>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4d4;">◯◯さん(取引先)が、よくやってるねってあなたのこと褒めてたよ。よかったね！</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4d4;">〇〇が居ないとはじまらない。</div>
+                    </div>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4d4;">いつも頑張ってるね。</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4d4;">○○さんの上司さしてもらって、すごい毎日が楽しかった！辛くなったらいつでも頼ってな！！
+                        </div>
+                    </div>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4d4;">細かいところまでチェックしてくれてたんだね。
+                        </div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4d4;">難しかったのに、やりきったね。
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="comment">
+                <div class="box-comment" style="border: 2px solid #ff8787;">
+                    <h4 style="background-color: #ff8787;">Comment</h4>
+                    <p>承認系の言葉は、ただ「すごい」と言うだけでなく、「具体的に何が良かったのか」を伝えると、相手の行動を強化し、より心理的な幸福感を高めることが期待できます。
+                        集めた言葉を分析する際、「汎用的な承認（すごい！）」と「具体的な行動の承認（よく気がついたね）」に細分化してみるのもさらに相手に喜ばれているかもしれませんね。</p>
+                </div>
+            </section>
+            <footer>
+                <p>@ Good Words Stocker</p>
+            </footer>
+        </div>
+        <aside class="right-side-element">
+            <div class="side-content-list">
+                <div class="side-content-item">
+                    <img src="./img/Good.png" alt="Goodの画像">
+                </div>
+
+                <div class="side-content-item">
+                    <img src="./img/Words.png" alt="Wordsの画像">
+                </div>
+
+                <div class="side-content-item">
+                    <img src="./img/Stocker.png" alt="Stockerの画像">
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div id="modal-mask"></div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+    <div id="modal-mask"></div>
+</body>
+</html>

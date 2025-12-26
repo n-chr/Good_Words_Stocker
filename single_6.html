@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Words Stocker</title>
+    <link rel="stylesheet" href="./css/single_style.css">
+    <script src="./js/single_script.js" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header-mobile">
+        <a href="index.html">
+            <h1><img src="./img/logo.png"></h1>
+        </a>
+        <div id="navArea">
+            <nav>
+                <div class="inner">
+                    <ul>
+                        <li><a href="./index.html#sec01">About</a></li>
+                        <li><a href="./index.html#sec02">Words</a></li>
+                        <li><a href="./index.html#sec03">Survey Results</a></li>
+                        <li><a href="./index.html#sec04">References</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="toggle_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="mask"></div>
+        </div>
+    </header>
+    <div class="outer-container">
+        <aside class="left-side-element">
+            <div class="nav_wrapper">
+                <div class="button_solid012">
+                    <a href="./index.html#sec01">About<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec02">Words<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec03">Survey Results<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec04">References<i class="fas fa-angle-right fa-position-right"></i></a>
+                </div>
+            </div>
+        </aside>
+        <div class="wrapper cstm-box-notebook" id="sec01">
+            <section class="Words" style="background-color: #ff9adc;">
+                <h2>感謝</h2>
+                <h3 style="color: #FFF;">相手の行為や配慮に対してお礼の気持ちを伝える言葉</h3>
+            </section>
+            <section class="Words-list" id="sec02">
+                <div class="list-grid">
+                    <div class="heading" style="border-right: 27px solid #ff9adc;"
+                        data-modal-target="#modal-kokorokara">
+                        <h4>心から感謝しています</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff9adc;" data-modal-target="#modal-okagesama">
+                        <h4>おかげさまで</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff9adc;" data-modal-target="#modal-sinsetu">
+                        <h4>親切にありがとう</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff9adc;"
+                        data-modal-target="#modal-kinikakeru">
+                        <h4>いつも気にかけてくれてありがとう</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff9adc;" data-modal-target="#modal-kiku">
+                        <h4>聞いてくれてありがとう</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff9adc;" data-modal-target="#modal-gotisou">
+                        <h4>ご馳走様</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff9adc;"
+                        data-modal-target="#modal-tasukaruyo">
+                        <h4>助かるよ</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff9adc;" data-modal-target="#modal-sikirenai">
+                        <h4>感謝してもしきれないよ</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ff9adc;" data-modal-target="#modal-tetudai">
+                        <h4>手伝ってくれてありがとう</h4>
+                    </div>
+                </div>
+            </section>
+            <section id="modal">
+                <div id="modal-kokorokara" class="modal">
+                    <div class="modal-content">
+                        <h4>心から感謝しています</h4>
+                        <p>深い、または重大なサポートを受けたときに、気持ちを込めた強い感謝を伝える。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff9adc;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-okagesama" class="modal">
+                    <div class="modal-content">
+                        <h4>おかげさまで</h4>
+                        <p>相手の貢献があってこそ、良い結果が得られたということを示し、感謝する。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff9adc;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-sinsetu" class="modal">
+                    <div class="modal-content">
+                        <h4>親切にありがとう</h4>
+                        <p>相手の優しい人柄（人柄評価の要素も含む）に基づいた行為に対する感謝を伝える。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff9adc;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kinikakeru" class="modal">
+                    <div class="modal-content">
+                        <h4>いつも気にかけてくれてありがとう</h4>
+                        <p>継続的な配慮やサポート（存在承認の要素も含む）に対して感謝を伝える。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff9adc;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kiku" class="modal">
+                    <div class="modal-content">
+                        <h4>聞いてくれてありがとう</h4>
+                        <p>傾聴という相手の行為と配慮に対して感謝を伝える。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff9adc;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-gotisou" class="modal">
+                    <div class="modal-content">
+                        <h4>ごちそうさま</h4>
+                        <p>食事やもてなしを受けた行為に対して、感謝を伝える。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff9adc;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-tasukaruyo" class="modal">
+                    <div class="modal-content">
+                        <h4>助かるよ</h4>
+                        <p>相手の行為が自分にとって有益であったことへの感謝と評価。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff9adc;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-sikirenai" class="modal">
+                    <div class="modal-content">
+                        <h4>感謝してもしきれないよ</h4>
+                        <p>相手の貢献が非常に大きいことを示し、最大限の感謝を伝える。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff9adc;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-tetudai" class="modal">
+                    <div class="modal-content">
+                        <h4>手伝ってくれてありがとう</h4>
+                        <p>労力や時間を使った具体的なサポートの行為に対して感謝を伝える。</p>
+                        <button class="close-btn modal-close" style="background-color: #ff9adc;">閉じる</button>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <h3>実際に言われた言葉たち</h3>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4f0;">ありがとう！</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4f0;">困ってるときに助けてくれてありがとう！</div>
+                    </div>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4f0;">傍にいてくれてありがとう。</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4f0;">忙しいのに時間を作ってくれてありがとう。</div>
+                    </div>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4f0;">手伝ってくれてありがとう。</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffd4f0;">ご馳走様です。</div>
+                    </div>
+                </div>
+            </section>
+            <section class="comment">
+                <div class="box-comment" style="border: 2px solid #ff9adc;">
+                    <h4 style="background-color: #ff9adc;">Comment</h4>
+                    <p>感謝系の言葉は、ポジティブな相互作用を促す核となる言葉です。研究で可視化する際、「具体的な行為への感謝（助かるよ）」と「手間や配慮への感謝（お手数おかけしました）」のように、感謝の対象を分類することで、ユーザーが感謝の気持ちをより適切に伝える手助けができるかもしれません。
+                    </p>
+                </div>
+            </section>
+            <footer>
+                <p>@ Good Words Stocker</p>
+            </footer>
+        </div>
+        <aside class="right-side-element">
+            <div class="side-content-list">
+                <div class="side-content-item">
+                    <img src="./img/Good.png" alt="Goodの画像">
+                </div>
+                <div class="side-content-item">
+                    <img src="./img/Words.png" alt="Wordsの画像">
+                </div>
+                <div class="side-content-item">
+                    <img src="./img/Stocker.png" alt="Stockerの画像">
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div id="modal-mask"></div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+    <div id="modal-mask"></div>
+</body>
+</html>

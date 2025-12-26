@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Words Stocker</title>
+    <link rel="stylesheet" href="./css/single_style.css">
+    <script src="./js/single_script.js" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header-mobile">
+        <a href="index.html">
+            <h1><img src="./img/logo.png"></h1>
+        </a>
+        <div id="navArea">
+            <nav>
+                <div class="inner">
+                    <ul>
+                        <li><a href="./index.html#sec01">About</a></li>
+                        <li><a href="./index.html#sec02">Words</a></li>
+                        <li><a href="./index.html#sec03">Survey Results</a></li>
+                        <li><a href="./index.html#sec04">References</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="toggle_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="mask"></div>
+        </div>
+    </header>
+    <div class="outer-container">
+        <aside class="left-side-element">
+            <div class="nav_wrapper">
+                <div class="button_solid012">
+                    <a href="./index.html#sec01">About<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec02">Words<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec03">Survey Results<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec04">References<i class="fas fa-angle-right fa-position-right"></i></a>
+                </div>
+            </div>
+        </aside>
+        <div class="wrapper cstm-box-notebook" id="sec01">
+            <section class="Words" style="background-color: #ffaa25;">
+                <h2>励まし</h2>
+                <h3 style="color: #FFF;">相手を鼓舞し、前向きな行動を促す言葉</h3>
+            </section>
+            <section class="Words-list" id="sec02">
+                <div class="list-grid">
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-nantoka">
+                        <h4>なんとかなるよ</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-kakaekomu">
+                        <h4>一人で抱え込まないで</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-kinisinai">
+                        <h4>気にしなくていいよ</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-pesu">
+                        <h4>あなたのペースでいいよ</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-ouen">
+                        <h4>応援しているよ</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-yasumi">
+                        <h4>休むのも仕事のうちだよ</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-daijyoubu">
+                        <h4>大丈夫だよ</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-murisinai">
+                        <h4>無理しないで</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-chance">
+                        <h4>次のチャンスがあるさ</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-kangaeru">
+                        <h4>一緒に考えてみよう</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-kitto">
+                        <h4>きっとうまくいく</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #ffaa25;" data-modal-target="#modal-fight">
+                        <h4>ファイト！</h4>
+                    </div>
+                </div>
+            </section>
+            <section id="modal">
+                <div id="modal-nantoka" class="modal">
+                    <div class="modal-content">
+                        <h4>なんとかなるよ</h4>
+                        <p>不安を感じているときに、状況は悪くない、または解決できると安心させ、前向きな気持ちを促す。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kakaekomu" class="modal">
+                    <div class="modal-content">
+                        <h4>一人で抱え込まないで</h4>
+                        <p>精神的な負担を軽減するため、サポートがあることを伝え、助けを求めることを促す。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kinisinai" class="modal">
+                    <div class="modal-content">
+                        <h4>気にしなくていいよ</h4>
+                        <p>失敗やミスをしたときに、その結果から気持ちを切り離し、再スタートを促す。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-pesu" class="modal">
+                    <div class="modal-content">
+                        <h4>あなたのペースでいいよ</h4>
+                        <p>焦りやプレッシャーを感じているときに、自分のリズムで進めることを承認し、安心させる。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-ouen" class="modal">
+                    <div class="modal-content">
+                        <h4>応援しているよ</h4>
+                        <p>挑戦をしている人に対し、無条件のサポートを伝え、精神的に後押しする。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-yasumi" class="modal">
+                    <div class="modal-content">
+                        <h4>休むのも仕事のうちだよ</h4>
+                        <p>疲労やストレスを感じているときに、立ち止まることの重要性を承認し、回復を促す。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-daijyoubu" class="modal">
+                    <div class="modal-content">
+                        <h4>大丈夫だよ</h4>
+                        <p>不安を感じているときに、状況は悪くない、または解決できると安心させる。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-murisinai" class="modal">
+                    <div class="modal-content">
+                        <h4>無理しないで</h4>
+                        <p>相手の健康や状況を気遣い、身体的・精神的な負担の軽減を促す。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-chance" class="modal">
+                    <div class="modal-content">
+                        <h4>次のチャンスがあるさ</h4>
+                        <p>結果が伴わなかったときに、視点を未来に向けさせ、再挑戦への意欲を鼓舞する。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kangaeru" class="modal">
+                    <div class="modal-content">
+                        <h4>一緒に考えてみよう</h4>
+                        <p>困難な課題に直面しているときに、寄り添い、具体的な行動を促す。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kitto" class="modal">
+                    <div class="modal-content">
+                        <h4>きっとうまくいく</h4>
+                        <p>未来への期待を高め、挑戦への一歩を鼓舞する。
+                        </p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-fight" class="modal">
+                    <div class="modal-content">
+                        <h4>ファイト！</h4>
+                        <p>活力を与え、行動を起こすよう、簡潔に鼓舞する。</p>
+                        <button class="close-btn modal-close" style="background-color: #ffaa25;">閉じる</button>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <h3 style="padding: 0 0 100px;">実際に言われた言葉たち</h3>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffdba2;">いつも元気をもらってるよ！</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffdba2;">お疲れ様〜。</div>
+                    </div>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffdba2;">がんばれ〜！！！！</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffdba2;">頑張ってること知ってるよ。</div>
+                    </div>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffdba2;">一緒に考えてみよう。
+                        </div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffdba2;">○○君なら乗り越えられるって信じてる。
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="comment">
+                <div class="box-comment" style="border: 2px solid #ffaa25;">
+                    <h4 style="background-color: #ffaa25;">Comment</h4>
+                    <p>励まし系の言葉を可視化する際、「安心・安堵を与える言葉（例：大丈夫だよ）」と「行動を後押しする言葉（例：次のチャンスがあるさ）」のように、効果別に分類して提示するのも、ユーザーにとってより役立つ情報になるかもしれません。</p>
+                </div>
+            </section>
+            <footer>
+                <p>@ Good Words Stocker</p>
+            </footer>
+        </div>
+        <aside class="right-side-element">
+            <div class="side-content-list">
+                <div class="side-content-item">
+                    <img src="./img/Good.png" alt="Goodの画像">
+                </div>
+                <div class="side-content-item">
+                    <img src="./img/Words.png" alt="Wordsの画像">
+                </div>
+                <div class="side-content-item">
+                    <img src="./img/Stocker.png" alt="Stockerの画像">
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div id="modal-mask"></div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+    <div id="modal-mask"></div>
+</body>
+</html>

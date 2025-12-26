@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Words Stocker</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="./js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header class="header-mobile">
+        <a href="index.html">
+            <h1><img src="./img/logo.png"></h1>
+        </a>
+        <div id="navArea">
+            <nav>
+                <div class="inner">
+                    <ul>
+                        <li><a href="./index.html#sec01">About</a></li>
+                        <li><a href="./index.html#sec02">Words</a></li>
+                        <li><a href="./index.html#sec03">Survey Results</a></li>
+                        <li><a href="./index.html#sec04">References</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+            <div class="toggle_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="mask"></div>
+        </div>
+    </header>
+    <div class="outer-container">
+        <aside class="left-side-element">
+            <div class="nav_wrapper">
+                <div class="button_solid012">
+                    <a href="#sec01">About<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="#sec02">Words<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="#sec03">Survey Results<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec04">References<i class="fas fa-angle-right fa-position-right"></i></a>
+                </div>
+            </div>
+        </aside>
+        <div class="wrapper cstm-box-notebook">
+            <section class="content" id="sec01">
+                <h2>About</h2>
+                <h3>このサイトについて</h3>
+                <p class="catch_copy"><span>ようこそ！</span>
+                    <span>ここは、人に言われて嬉しい言葉を集めるWebサイトです！</span>
+                    <span>人に言われると嬉しい言葉が心理的な健康に与える影響を考慮し、</span>
+                    <span>ストレス軽減や自己肯定感の向上に役立つ言葉を広めるために制作しました。</span>
+                    <span>少しでもお役に立てば嬉しいです。</span>
+                </p>
+            </section>
+            <section class="content" id="sec02">
+                <section id="Words">
+                    <h2>Words</h2>
+                    <h3>分類</h3>
+                    <div class="list-grid">
+                        <a href="single_1.html" class="heading" style="border-right: 27px solid #ff8787;">Recognition
+                            <h4>承認</h4>
+                            <p>相手の行動、努力、結果を認め、評価する言葉</p>
+                        </a>
+                        <a href="single_2.html" class="heading" style="border-right: 27px solid #ffaa25;">Encouragement
+                            <h4>励まし</h4>
+                            <p>相手を鼓舞し、前向きな行動を促す言葉</p>
+                        </a>
+                        <a href="single_3.html" class="heading" style="border-right: 27px solid #81ca76;">Presence
+                            <h4>存在承認</h4>
+                            <p>相手の存在そのものを認め、受け入れていることを示す言葉</p>
+                        </a>
+                        <a href="single_4.html" class="heading" style="border-right: 27px solid #708eff;">Skill &
+                            Appearance
+                            <h4>能力・外見承認</h4>
+                            <p>相手のスキル、才能、知識、または外見を褒める言葉</p>
+                        </a>
+                        <a href="single_5.html" class="heading" style="border-right: 27px solid #ad70ff;">Personality
+                            <h4>人柄評価</h4>
+                            <p>相手の性格、内面、人間性といった抽象的な特質を褒める言葉</p>
+                        </a>
+                        <a href="single_6.html" class="heading" style="border-right: 27px solid #ff9adc;">Gratitude
+                            <h4>感謝</h4>
+                            <p>相手の行為や配慮に対してお礼の気持ちを伝える言葉</p>
+                        </a>
+                    </div>
+                </section>
+            </section>
+            <section class="content" id="sec03">
+                <section id="Survey_Results">
+                    <h2>Survey Results</h2>
+                    <h3>アンケート結果</h3>
+                    <div class="Survey_Results">
+                        <div class="accordion_container">
+                            <div class="accordion-item">
+                                <div class="accordion-title">
+                                    <h5>1. 年代別構成</h5>
+                                    <span class="icon fas fa-chevron-down"></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>アンケート回答者の年代構成は以下の通りです。主に20代からの回答が多くなっています。</p>
+                                    <div id="piechart1" style="width: 100%; height: 250px;"></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-title">
+                                    <h5>2. 性別構成</h5>
+                                    <span class="icon fas fa-chevron-down"></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>女性からの回答が約8割を占めています。</p>
+                                    <div id="piechart2" style="width: 100%; height: 250px;"></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-title">
+                                    <h5>3. 職業構成</h5>
+                                    <span class="icon fas fa-chevron-down"></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>回答者のほとんどが学生です。</p>
+                                    <div id="piechart3" style="width: 100%; height: 250px;"></div>
+                                </div>
+                            </div>
+                            <section class="content">
+                                <div class="comment">
+                                    <div class="box-comment" style="border: 2px solid #ff8787;">
+                                        <h4 style="background-color: #ff8787;">Q1,嬉しかった言葉TOP3</h4>
+                                        <ul class="list-9">
+                                            <li>ありがとう（14票）</li>
+                                            <li>頑張ったね（2票）</li>
+                                            <li>好き（2票）</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="box-comment" style="border: 2px solid #ffaa25;">
+                                        <h4 style="background-color: #ffaa25;">Q2,言葉をくれた人TOP3</h4>
+                                        <ul class="list-9">
+                                            <li>友人（25票）</li>
+                                            <li>家族（17票）</li>
+                                            <li>恋人（10票）</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="box-comment" style="border: 2px solid #81ca76;">
+                                        <h4 style="background-color: #81ca76;">Q3,嬉しかった理由TOP3</h4>
+                                        <ul class="list-9">
+                                            <li>自分を褒めてくれたと感じたから。（24票）</li>
+                                            <li>頑張りを見ていてくれたから。（21票）</li>
+                                            <li>安心できたから。（15票）</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="box-comment" style="border: 2px solid #708eff;">
+                                        <h4 style="background-color: #708eff;">Q4,嬉しかった言葉</h4>
+                                        <ul class="list-9">
+                                            <li>いつも頑張ってるね。</li>
+                                            <li>他の人とは違う視点で物事を見れていてすごいと思う。</li>
+                                            <li>いつも頑張ってて偉い！</li>
+                                            <li>貴方に出会えてよかった。</li>
+                                            <li>あなたのそういうところすっごく好き。</li>
+                                            <li>今まであった人でいちばん面白いわ。</li>
+                                            <li>〇〇が居ないとはじまらない。</li>
+                                            <li>きっと何とかなるから大丈夫だよ。</li>
+                                            <li>無理してなくても一緒にいたいと思える。</li>
+                                            <li>いつまでも支えるよ。</li>
+                                            <li>いつも頼りにしてる。</li>
+                                            <li>いるだけで場が明るくなるね。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="box-comment" style="border: 2px solid #ad70ff;">
+                                        <h4 style="background-color: #ad70ff;">Q5,心に残った理由</h4>
+                                        <ul class="list-9">
+                                            <li>この先も一緒に過ごせていけると思ったから。</li>
+                                            <li>自分が音楽において1番大切にしている部分を認めてもらえた気がしたから。</li>
+                                            <li>初めて言われたから。</li>
+                                            <li>自分の知らないことを教えてもらったから。</li>
+                                            <li>嬉しかった！</li>
+                                            <li>社会人になるのが不安だったけど、すこし安心できたから。</li>
+                                            <li>今までの頑張りを全て認めてくれてた気がしたから。</li>
+                                            <li>信頼を置いてくれていると感じた。</li>
+                                            <li>ちゃんと見てくれてる、認めてくれてると思えたから。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="content" id="sec04">
+                <h2>References</h2>
+                <h3>参考文献</h3>
+                <blockquote class="quote-3">
+                    <h2 style="padding: 0 0 25px;">拡張形成理論</h2>
+                    <p>　拡張形成理論とは、バーバラ・フレドリクソンが提唱した心理学の理論です。ポジティブな感情が一時的な視野の広がり（拡張）と、長期的な資源（知識、スキル、人間関係など）の形成（形成）を繰り返し、自己成長につながるというものです。
+                    </p>
+                    <p>　この拡張と形成を繰り返すことで、人は成長すると考えられています。</p>
+                    <p>具体例:喜びを感じることで、周りの出来事への関心が高まり、好奇心に基づいて新しいことを学ぶきっかけが生まれます。この経験が、知識やスキルといった「資源」を形成し、将来の困難に対処する力を養うといわれています。
+                    </p>
+                    <cite>引用元：<a href="https://coaching-l.net/broaden-and-build-theory/">拡張形成理論</a></cite>
+                </blockquote>
+                <blockquote class="quote-3">
+                    <h2 style="padding: 0 0 25px;">令和４年<br>労働安全衛生調査結果</h2>
+                    <p>　厚労省による仕事や職業生活に関する強いストレスについての個人調査では、現在の仕事や職業生活に強い不安、悩み、ストレスとなっていると感じる事柄がある労働者のうち、その内容は「仕事の量」が36.3%（同43.2%）と最も多いです。
+                    </p>
+                    <p>現在の仕事や職業生活に関することで、強い不安、悩み、ストレスとなっていると感じる事柄がある労働者の割合は82.2%[令和3年調査53.3%］となっています。</p>
+                    <p>ストレスとなっていると感じる事柄がある労働者について、その内容をみると、「仕事の量」が36.3%と最も多く、改いで「仕事の失敗、責任の発生等」が35.9%、「仕事の質」が27.1%となっています。
+                    </p>
+                    <cite>引用元：<a
+                            href="https://www.mhlw.go.jp/toukei/list/dl/r04-46-50_kekka-gaiyo02.pdf">令和４年労働安全衛生調査結果（厚労省）</a></cite>
+                </blockquote>
+            </section>
+        </div>
+    </div>
+    <footer>
+        @ Good Words Stocker
+    </footer>
+    <aside class="right-side-element">
+        <div class="side-content-list">
+            <div class="side-content-item">
+                <a href="index.html">
+                    <h1><img src="./img/Good.png" alt="Goodの画像"></h1>
+                </a>
+            </div>
+            <div class="side-content-item">
+                <a href="index.html">
+                    <h1><img src="./img/Words.png" alt="Wordsの画像"></h1>
+                </a>
+            </div>
+            <div class="side-content-item">
+                <a href="index.html">
+                    <h1><img src="./img/Stocker.png" alt="Stockerの画像"></h1>
+                </a>
+            </div>
+        </div>
+    </aside>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+    <div class="container">
+        <button class="page-top"><i class="fa-solid fa-arrow-up"></i>
+            <p>PAGE TOP</p>
+        </button>
+    </div>
+</body>
+
+</html>

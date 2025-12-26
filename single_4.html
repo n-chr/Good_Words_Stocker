@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Words Stocker</title>
+    <link rel="stylesheet" href="./css/single_style.css">
+    <script src="./js/single_script.js" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header-mobile">
+        <a href="index.html">
+            <h1><img src="./img/logo.png"></h1>
+        </a>
+        <div id="navArea">
+            <nav>
+                <div class="inner">
+                    <ul>
+                        <li><a href="./index.html#sec01">About</a></li>
+                        <li><a href="./index.html#sec02">Words</a></li>
+                        <li><a href="./index.html#sec03">Survey Results</a></li>
+                        <li><a href="./index.html#sec04">References</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="toggle_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="mask"></div>
+        </div>
+    </header>
+    <div class="outer-container">
+        <aside class="left-side-element">
+            <div class="nav_wrapper">
+                <div class="button_solid012">
+                    <a href="./index.html#sec01">About<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec02">Words<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec03">Survey Results<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="./index.html#sec04">References<i class="fas fa-angle-right fa-position-right"></i></a>
+                </div>
+            </div>
+        </aside>
+        <div class="wrapper cstm-box-notebook" id="sec01">
+            <section class="Words" style="background-color: #708eff;">
+                <h2>能力・外見承認</h2>
+                <h3 style="color: #FFF;">相手のスキル、才能、知識、または外見を褒める言葉</h3>
+            </section>
+            <section class="Words-list" id="sec02">
+                <div class="list-grid">
+                    <div class="heading" style="border-right: 27px solid #708eff;" data-modal-target="#modal-kasikoi">
+                        <h4>賢いね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #708eff;" data-modal-target="#modal-tegiwa">
+                        <h4>手際がいいね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #708eff;" data-modal-target="#modal-hassou">
+                        <h4>発想が面白いね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #708eff;" data-modal-target="#modal-sisei">
+                        <h4>姿勢が綺麗だね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #708eff;" data-modal-target="#modal-osyare">
+                        <h4>いつもおしゃれだね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #708eff;" data-modal-target="#modal-kikjyouzu">
+                        <h4>聞き上手だね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #708eff;" data-modal-target="#modal-sensu">
+                        <h4>センスがいいね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #708eff;" data-modal-target="#modal-tensai">
+                        <h4>天才だね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #708eff;"
+                        data-modal-target="#modal-kakkokawaii">
+                        <h4>かっこいいね/かわいいね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #708eff;"
+                        data-modal-target="#modal-koudouryoku">
+                        <h4>行動力があるね</h4>
+                    </div>
+                    <div class="heading" style="border-right: 27px solid #708eff;" data-modal-target="#modal-handan">
+                        <h4>判断が早いね</h4>
+                    </div>
+                </div>
+            </section>
+            <section id="modal">
+                <div id="modal-kasikoi" class="modal">
+                    <div class="modal-content">
+                        <h4>賢いね</h4>
+                        <p>相手の知識や思考力といった認知的な能力を評価する。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-tegiwa" class="modal">
+                    <div class="modal-content">
+                        <h4>手際がいいね</h4>
+                        <p>相手の作業スキルや効率の良さといった実務的な能力を評価する。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-hassou" class="modal">
+                    <div class="modal-content">
+                        <h4>発想が面白いね</h4>
+                        <p>相手の独創的なアイデアや創造性といった才能を評価する。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-sisei" class="modal">
+                    <div class="modal-content">
+                        <h4>姿勢が綺麗だね</h4>
+                        <p>相手の外見の中でも、立ち振る舞いや整っている部分を具体的に褒める。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-osyare" class="modal">
+                    <div class="modal-content">
+                        <h4>いつもおしゃれだね</h4>
+                        <p>相手のファッションセンスや自己表現といった外見に関するスキルを評価する。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kikijyouzu" class="modal">
+                    <div class="modal-content">
+                        <h4>聞き上手だね</h4>
+                        <p>相手の傾聴力やコミュニケーション能力を具体的に褒める。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-sensu" class="modal">
+                    <div class="modal-content">
+                        <h4>センスがいいね</h4>
+                        <p>相手の能力・才能（感性、美的感覚）を具体的に褒めている。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-tensai" class="modal">
+                    <div class="modal-content">
+                        <h4>天才だね</h4>
+                        <p>相手の能力・才能を最大級に評価している。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-kakkokawaii" class="modal">
+                    <div class="modal-content">
+                        <h4>かっこいいね/かわいいね</h4>
+                        <p>相手の外見を褒めている。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-koudouryoku" class="modal">
+                    <div class="modal-content">
+                        <h4>行動力があるね</h4>
+                        <p>相手の実行力やスピード感といった行動的な能力を評価する。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div id="modal-handan" class="modal">
+                    <div class="modal-content">
+                        <h4>判断が早いね</h4>
+                        <p>相手の決断力や思考の速さといった能力を評価する。</p>
+                        <button class="close-btn modal-close" style="background-color: #708eff;">閉じる</button>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <h3>実際に言われた言葉たち</h3>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #d7e0ff;">可愛い〜！</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #d7e0ff;">面白い！</div>
+                    </div>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #d7e0ff;">筋肉すご！！</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #d7e0ff;">おしゃれだね。</div>
+                    </div>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #d7e0ff;">メイク上手だね。</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #d7e0ff;">歌が上手い！</div>
+                    </div>
+                    <div class="message them">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #d7e0ff;">姿勢が良いね。</div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="./img/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #d7e0ff;">センス良い！</div>
+                    </div>                </div>
+            </section>
+            <section class="comment">
+                <div class="box-comment" style="border: 2px solid #708eff;">
+                    <h4 style="background-color: #708eff;">Comment</h4>
+                    <p>能力・外見承認系の言葉を可視化する際、「目に見える成果に関するスキル（手際が良い、資料が見やすい）」と「生まれ持った資質・外見（おしゃれ、頭が良い）」のように細分化して提示すると、ユーザーがより適切なシチュエーションで言葉を選べるようになります。</p>
+                </div>
+            </section>
+            <footer>
+                <p>@ Good Words Stocker</p>
+            </footer>
+        </div>
+        <aside class="right-side-element">
+            <div class="side-content-list">
+                <div class="side-content-item">
+                    <img src="./img/Good.png" alt="Goodの画像">
+                </div>
+
+                <div class="side-content-item">
+                    <img src="./img/Words.png" alt="Wordsの画像">
+                </div>
+
+                <div class="side-content-item">
+                    <img src="./img/Stocker.png" alt="Stockerの画像">
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div id="modal-mask"></div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+    <div id="modal-mask"></div>
+</body>
+</html>

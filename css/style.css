@@ -1,0 +1,845 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)), linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+    background-size: 16px 16px;
+    background-repeat: repeat;
+    background-position: center center;
+    line-height: 2rem;
+}
+
+/* for SVG --------------------------------------------------*/
+.bg {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.blurred {
+    fill-opacity: 0;
+    stroke-width: 1.5;
+}
+
+.filled {
+    fill-opacity: 0.2;
+    stroke-width: 1;
+    stroke-opacity: 0.3;
+}
+
+/*ナビ---------------------------------------------*/
+.nav_wrapper {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+#sec01 {
+    padding: 55% 50px 0;
+    text-align: center;
+}
+
+#sec02 {
+    padding: 60% 50px 30%;
+}
+
+#sec03 {
+    padding: 30% 50px;
+}
+
+#sec04 {
+    padding: 30% 50px 0;
+}
+
+h2 {
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    margin: 0 0 0;
+}
+
+h3 {
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    margin: 0;
+    padding: 0 0 10px
+}
+
+h4 {
+    margin: 0;
+}
+
+li {
+    font-size: 0.9em;
+}
+
+.catch_copy {
+    line-height: 55px;
+}
+
+.catch_copy span {
+    transition: 1s;
+    opacity: 0;
+    transform: translateY(20px);
+    display: block;
+}
+
+.catch_copy span:first-child {
+    animation: catch_anime 1.4s forwards 1s;
+}
+
+.catch_copy span:nth-child(2) {
+    animation: catch_anime 1.4s forwards 2s;
+}
+
+.catch_copy span:nth-child(3) {
+    animation: catch_anime 1.4s forwards 3s;
+}
+
+.catch_copy span:nth-child(4) {
+    animation: catch_anime 1.4s forwards 4s;
+}
+
+.catch_copy span:nth-child(5) {
+    animation: catch_anime 1.4s forwards 5s;
+}
+
+@keyframes catch_anime {
+    0% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Words--------------------------------------------------------- */
+.list-grid .list {
+    margin-bottom: var(--global-space);
+    background: #fff;
+    color: #000;
+    grid-template-rows: auto 1fr auto;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.list-grid {
+    display: grid;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.list-grid a {
+    margin: 0;
+}
+
+.heading h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.heading p {
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: left;
+    margin: 0;
+}
+
+
+.heading {
+    display: block;
+    position: relative;
+    padding: 25px 20px 20px 20px;
+    background-color: #ffffff;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: rotate(-1deg);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.heading:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.heading:active {
+    transform: scale(0.98);
+}
+
+.clearfix {
+    display: block;
+}
+
+.clearfix:before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 画像設定 --------------------------------------*/
+.responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ノート風 -------------------------------------*/
+.cstm-box-notebook {
+    position: relative;
+    background: #f4f3f2;
+}
+
+.cstm-box-notebook::before {
+    content: '';
+    position: absolute;
+    inset: 0.5em 0 0 0;
+    margin: 0 auto;
+    width: 95%;
+    border-top: dotted 15px #fff;
+    pointer-events: none;
+}
+
+.cstm-box-notebook p {
+    margin: 0;
+}
+
+.left-side-element,
+.right-side-element {
+    display: none;
+}
+
+.quote-3 {
+    position: relative;
+    margin: 0 auto;
+    padding: 50px 10px;
+}
+
+.quote-3::before {
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    left: 0.5em;
+    width: 2em;
+    height: 2em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z' fill='%235c5c5c'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    content: '';
+}
+
+.quote-3 p {
+    margin-top: 0;
+}
+
+.quote-3 cite {
+    display: block;
+    color: #404040;
+    font-size: .8em;
+    text-align: right;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    background-color: #212529;
+    color: #FFF;
+    padding: 10px 0;
+}
+
+/* グラフ付きアコーディオンメニュー================================= */
+.accordion-item {
+    margin: 30px 0 0;
+    border: 1px solid #ddd;
+    border-radius: 35px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+/* タイトル部分 (クリックエリア) */
+.accordion-title {
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+    border: 2px solid #000;
+    border-radius: 35px;
+}
+
+.accordion-title h5 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* 矢印アイコン */
+.accordion-title .icon {
+    transition: transform 0.3s ease;
+}
+
+/* アコーディオンが開いているときのアイコンの向き */
+.accordion-title.active .icon {
+    transform: rotate(180deg);
+}
+
+/* コンテンツ部分 */
+.accordion-content {
+    padding: 0 20px;
+    background-color: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+/* コンテンツ内の要素のパディング */
+.accordion-content p {
+    padding-top: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* グラフエリア */
+#piechart1,
+#piechart2,
+#piechart3 {
+    padding-bottom: 15px;
+}
+
+.box-comment {
+    position: relative;
+    margin: 6em auto 0;
+    padding: 0em 1.5em;
+    border-radius: 0 15px 15px;
+    line-height: 30px;
+    background-color: #fff;
+}
+
+.box-comment h4 {
+    position: absolute;
+    top: -3.5rem;
+    left: -2px;
+    padding: 0.75em 2.2em;
+    border-radius: 25px 25px 0 0;
+    color: #fff;
+}
+
+.box-comment p {
+    margin: 0;
+    color: #333;
+}
+
+/* ボタン -------------------------------------------------------*/
+.btn,
+a.btn,
+button.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+}
+
+a.btn-malformation {
+    font-size: 2rem;
+
+    padding: 3rem 4rem;
+
+    color: #fff;
+    border-radius: 100% 80px / 80px 100%;
+    background-color: #eb6100;
+}
+
+a.btn-malformation:hover {
+    color: #fff;
+    border-radius: 60% 80% / 100% 80%;
+}
+
+a.btn-malformation {
+    font-size: 2rem;
+
+    padding: 3rem 4rem;
+
+    color: #fff;
+    border-radius: 100% 80px / 80px 100%;
+}
+
+a.btn-malformation:hover {
+    color: #fff;
+    border-radius: 60% 80% / 100% 80%;
+}
+
+.btn-malformation--pastel {
+    background: #fca1a1;
+    background: -webkit-linear-gradient(-45deg, #fca1a1 40%, #fcfc5d 100%);
+    background: -webkit-linear-gradient(315deg, #fca1a1 40%, #fcfc5d 100%);
+    background: linear-gradient(135deg, #fca1a1 40%, #fcfc5d 100%);
+    -webkit-box-shadow: 30px 10px 0 #fefeb3;
+    box-shadow: 30px 10px 0 #fefeb3;
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fca1a1', endColorstr='#fcfc5d', GradientType=1);
+}
+
+/* solid012 */
+.button_solid012 a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    color: #000;
+    transition: 0.3s ease-in-out;
+    border: 2px solid #000;
+    z-index: 1;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 50px 0;
+}
+
+.button_solid012 a:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    z-index: -1;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.button_solid012 a:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: translate3d(0, 0.40rem, -1rem);
+    transform: translate3d(0, 0.40rem, -1rem);
+    border: 2px solid #000;
+    border-radius: inherit;
+    background: #a6f8dc;
+    ;
+    -webkit-box-shadow: 0 0.6rem 0 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 0.4rem 0 0 rgb(0 0 0 / 20%);
+    z-index: -2;
+}
+
+.button_solid012 a i {
+    position: absolute;
+    right: 9px;
+}
+
+.button_solid012 a:hover {
+    transform: translate3d(0, 0.2rem, -1rem);
+}
+
+.button_solid012 a:hover:after {
+    transform: translate3d(0, 0.2rem, -1rem);
+    box-shadow: 0 0.2rem 0 0 rgb(0 0 0 / 20%);
+}
+
+/* pagetop -------------------------------------------------------*/
+p {
+    font-size: 16px;
+}
+
+button {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 80px;
+    right: 50px;
+    bottom: -160px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    border: 0;
+    background: #db5151;
+    transition: .2s;
+    letter-spacing: 3px;
+    font-weight: bold;
+    border-radius: 100px 100px 0 0;
+}
+
+button i {
+    position: absolute;
+    font-size: 30px;
+    color: #FFF;
+    top: 15px;
+    font-weight: 300;
+}
+
+button p {
+    margin: 0;
+    font-size: 15px;
+    bottom: 13px;
+    position: absolute;
+}
+
+.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+button.is-active {
+    bottom: 0px;
+}
+
+.list-9 {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 1em;
+}
+
+.list-9 li {
+    padding: .5em;
+}
+
+.list-9 li:not(:last-child) {
+    border-bottom: 1px dashed #000000;
+}
+
+.list-9 li::marker {
+    color: #000000;
+    font-size: 1.1em;
+}
+
+@media screen and (min-width: 960px) {
+    .nav_wrapper {
+        position: static;
+        top: auto;
+        transform: none;
+        width: auto;
+    }
+
+    .nav_wrapper {
+        position: static;
+        top: auto;
+        transform: none;
+        right: auto;
+        z-index: auto;
+        text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .outer-container {
+        display: block;
+        margin-left: calc((100vw - 428px) / 2);
+        margin-right: calc((100vw - 428px) / 2);
+    }
+
+    .wrapper {
+        margin: 0 auto;
+        border-left: 1px solid #b0b0b0;
+        border-right: 1px solid #b0b0b0;
+
+    }
+
+    .left-side-element {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: auto;
+        width: calc((100vw - 428px) / 2);
+        overflow-y: auto;
+        padding-right: 0;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-side-element {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 30px;
+        right: auto;
+        width: calc((100vw - 428px) / 2);
+        overflow-y: auto;
+        padding-left: 0;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-content-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-grow: 1;
+        padding: 100px 0;
+    }
+
+    .side-content-item {
+        margin-bottom: 10px;
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .side-content-item img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    .side-content-item p {
+        font-size: 0.9rem;
+        margin: 5px 0 0;
+    }
+
+    .button-45 {
+        display: block;
+    }
+}
+
+/* モバイル用ヘッダーは非表示 */
+.header-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+
+    /* PC用ヘッダーを非表示 */
+    .header-pc {
+        display: none;
+    }
+
+    /* モバイル用ヘッダーを表示 */
+    .header-mobile {
+        display: block;
+        background-color: #ffffff;
+        color: white;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .header-mobile img {
+        width: 60%;
+    }
+
+    .wrapper {
+        margin-top: 120px;
+    }
+
+    #sec01 {
+        padding: 30% 50px;
+    }
+
+    button {
+        width: 100px;
+        height: 50px;
+        right: 25px;
+    }
+
+    button p {
+        visibility: hidden;
+    }
+
+    /* nav --------------------------------------------------------------------*/
+    nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        width: 300px;
+        background: #ffffff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transition: all .5s;
+        z-index: 3;
+        opacity: 0;
+    }
+
+    .open nav {
+        left: 0;
+        opacity: 1;
+    }
+
+    nav .inner {
+        padding: 25px;
+        margin: 50px 0px 0;
+    }
+
+    nav .inner ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav .inner ul li {
+        position: relative;
+        margin: 0;
+        border-bottom: 1px solid #333;
+    }
+
+    nav .inner ul li a {
+        display: block;
+        color: #333;
+        font-size: 35px;
+        padding: 1em;
+        text-decoration: none;
+        transition-duration: 0.2s;
+    }
+
+    nav .inner ul li a:hover {
+        background: #e4e4e4;
+    }
+
+    .toggle_btn {
+        display: block;
+        position: fixed;
+        top: 2rem;
+        right: 3rem;
+        width: 30px;
+        height: 30px;
+        transition: all .5s;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .toggle_btn span {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: #333;
+        border-radius: 4px;
+        transition: all .5s;
+    }
+
+    .toggle_btn span:nth-child(1) {
+        top: 4px;
+    }
+
+    .toggle_btn span:nth-child(2) {
+        top: 14px;
+    }
+
+    .toggle_btn span:nth-child(3) {
+        bottom: 4px;
+    }
+
+    .open .toggle_btn span {
+        background-color: #fff;
+    }
+
+    .open .toggle_btn span:nth-child(1) {
+        -webkit-transform: translateY(10px) rotate(-315deg);
+        transform: translateY(10px) rotate(-315deg);
+    }
+
+    .open .toggle_btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .open .toggle_btn span:nth-child(3) {
+        -webkit-transform: translateY(-10px) rotate(315deg);
+        transform: translateY(-10px) rotate(315deg);
+    }
+
+    #mask {
+        display: none;
+        transition: all .5s;
+    }
+
+    .open #mask {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: .8;
+        z-index: 2;
+        cursor: pointer;
+    }
+}
